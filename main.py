@@ -21,17 +21,16 @@ class Handler(webapp2.RequestHandler):
 
 class MainPage(Handler):
     def get(self):
-        title = self.request.get_all{'title'}
-		concept = self.request.get_all{'name' : 'concept1',
+	concept = self.request.get_all{'name' : 'concept1',
    				    'description1' : [description1, description2]
 					}
-		lesson = self.request.get_all{'name' : 'lesson1',
+	lesson = self.request.get_all{'name' : 'lesson1',
      				'concepts': [concept1, concept2]
 					}
-		stage = self.request.get_all{'name' : 'stage1',
+	stage = self.request.get_all{'name' : 'stage1',
                    'lessons': [lesson1, lesson2]
 					}
-		template_values = self.request.get_all{'stages' : [stage1, stage2, stage3, stage4]
+	template_values = self.request.get_all{'stages' : [stage1, stage2, stage3, stage4]
 							}
     	self.write(template.render(template_values))
         self.render("index.html", )
