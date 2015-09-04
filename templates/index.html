@@ -1,0 +1,725 @@
+{% extends base.html %}
+
+{% block content %}
+
+
+<h1> {{stage}} Important Concepts </h1>
+{% for lesson in lessons %}
+	<div class = "lesson"> 
+  		<h2> {{ lesson }} </h2>
+{% endfor %}
+  
+{% for concept in concepts %}
+<div class="concept">
+  <div class="concept-title">
+    {{ concept[0] }}
+  </div>
+  <div class="concept-description">
+    {{ concept[1] }}
+  </div>
+</div>
+{% endfor %}
+
+
+<h1>Stage 1 Important Concepts</h1>
+
+<div class = "lesson"> 
+  <h2>Lesson 1</h2>
+  
+  <div class="concept">
+    <div class="concept-title"> HTML</div>
+      <div class="concept-description">
+        <p>HTML is the text we read online, or, more fancily,
+        hypertext markup language.</p>
+      </div>
+    <div class="concept-title"> Tags and Elements</div>
+      <div class="concept-description">
+        <p>This is an example of a paragraph tag. Tags are used
+        to distinguish elements, or parts contained within the tags. 
+        The 'em' tag, for instance, places emphasis on text by 
+        <em>italicizing</em> it. The 'p' tag I've used separates the text 
+        within it into... PARAGRAPHS.</p>
+      </div>
+    <div class="concept-title">Why Computers Are Stupid</div>
+      <div class="concept-description">
+        <p>Computers need to be told what to do. They will misread
+        all unedited typos and ruin code, lest you <b>change
+        your ways</b>, Ebenezer. I promise to slow down and appreciate 
+        the meaning in <del>Christmas</del> coding.</p>
+      </div>
+    <div class="concept-title">Inline and Block Elements</div>
+      <div class="concept-description">     
+        <p>Block elements put themselves in blocks. Inline's don't. 
+        Block elements are like Meryl Streep in The Devil Wears Prada 
+        and inline elements are all Anne Hathaway and totally clueless
+        about style in comparison to Meryl, but they act
+        act as if it doesn't matter, and while I bet they totally want
+        to be apathetically cool too, they're just basic. omg.</p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 2: Creating a Structured Document with HTML</h2>
+  <div class="concept">
+    <div class="concept-title">Developer Tools</div>
+      <div class="concept-description">       
+        <p>Everything designed on a website is in blocks. If I were a front-end
+        developer, I'd be seeing blocks, blocks, blocks. Within the blocks are
+        trees of elements that may be designed separately based on their
+        tags. CSS is commonly used for that design.</p>
+      </div>
+    <div class="concept-title">HTML is Structured Like a Family Tree</div>
+      <div class="concept-description"> 
+        <p>As seen in this code, HTML elements are tiered within one another,
+        which allows for visual ease in picking out parts of a text for styling.</p>
+        <p>Each new element within another is indented and the indentations get deeper
+        the more elements that get nested within others. 
+      </div> 
+          <div class="concept-title">Text Editors</div>
+      <div class="concept-description">  
+      </div>
+        <p>HTML is written with text editors. I am currently writing in
+        Text Wrangler, which is less irritating to me than Sublime
+        because it doesn't automatically close tags, but it definitely does not make
+        indentation any easier. I don't know why that's so bothersome. I must be new!</p>
+  </div>
+</div>
+  
+<div class = "lesson"> 
+  <h2>Lesson 3: Adding Style to HTML Using CSS</h2>
+  <div class="concept-title">Avoiding Repetition</div>
+      <div class="concept">
+      <div class="concept-description"> 
+        <p>If programmers repeat the same code over and over in different places, any
+        future changes will be harder to make, as they will have to go back and find each
+        place it was used.</p>
+        <p>"div" and "class" labels allow for a universal application in multiple places
+        with a particular label in a document. The styling for every element with that
+        label can be done in one place. </p>
+      </div>
+    <div class="concept-title">CSS</div>
+      <div class="concept-description">  
+        <p>CSS, or cascading style sheets, is styling done in a separate document that
+        is linked to on the index page. It allows for non-redundancies by the assignment
+        of classes, etcetera.  
+    </div>
+  </div>
+</div>   
+
+<hr/>
+   
+<h1>Stage 2 Important Concepts</h1>
+
+<div class = "lesson"> 
+  <h2>Lesson 1: Introduction to Serious Programming</h2>
+  <div class="concept">
+    <div class="concept-title">What is a Computer Program</div>
+      <div class="concept-description">       
+        <p>Computers can be taught to do almost anything if correctly told what to do.</p>
+        <p>A program is the precise sequence of steps that a computer can follow to
+        do something.</p>
+      </div>
+    <div class="concept-title">Programming Languages</div>
+      <div class="concept-description"> 
+        <p>Spoken languages, like Spanish and English, are prone to varying
+        interpretations. Ambiguity confuses a computer.</p>
+        <p>Programming languages are coded expressions that allow people to communicate
+        with computers. Some examples include Python, Ruby, and Javascript.</p> 
+      </div> 
+          <div class="concept-title">Python Expressions and Grammar</div>
+      <div class="concept-description">  
+        <p>Python works through written "sentences" used to communicate with the 
+        computer. They are referred to as expressions.</p>
+        <p>Computers cannot interpret code if even one small error is present, so
+        being absolutely grammatically correct is crucial for functional code.</p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 2: Variables and Strings</h2>
+  <div class="concept">
+    <div class="concept-title">What is a variable in programming?</div>
+      <div class="concept-description">       
+        <p>Variables are a way for programmers to give names to values. If 
+        <code>my_variable</code> is a variable with a value of <code>2</code>, 
+        then the following code would print out <code>4</code>:</p>
+        <p><code>print my_variable + my_variable</code></p>
+      </div>
+    <div class="concept-title">Assigning Value to Variables</div>
+      <div class="concept-description">       
+        <p>Value can be assigned by writing the name of the variable = value. That
+        value can be changed. </p>
+        <p>Example: What's the difference  between what the equals sign = means 
+        in <code>2+3=5</code> and <code>my_variable=5</code>?  The former is a computation
+        meaning "is the same as", while the latter is a variable assignment and the
+        equals sign means "takes the value of". My_variable is given the value of 5.</p>
+      </div>
+    <div class="concept-title">How Are Variables Useful?</div>
+      <div class="concept-description"> 
+        <p>Variables have many uses. They improve readability by using names that make 
+        sense to humans. They give us a way to store the value of important data. They 
+        give us a way to change the value of something.</p>
+      </div> 
+    <div class="concept-title">The difference between strings and Variables</div>
+      <div class="concept-description">  
+        <p>What is the difference between <code>2+2</code> and <code>"2"+"2"</code>? 
+        Anything within quotations is a string and will just be placed side by side
+        if added together. Example: "2" + "2" would be "22". </p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 3: Input -> Function -> Output </h2>
+  <div class="concept">
+    <div class="concept-title">What is a function/procedure?</div>
+      <div class="concept-description">       
+        <p>A function is a procedure that will perform an operation and return a value.
+        Programming languages come with a standard library containing functions already 
+        built in when downloaded.</p>
+      </div>
+    <div class="concept-title">What is the difference between <b>making</b> and
+    <b>using</b> a function?</div>
+      <div class="concept-description">       
+        <p>New functions can me made by programmers to do pretty much anything you want. 
+        There are also plenty of functions already within the libraries of programming 
+        languages.</p>
+      </div>
+    <div class="concept-title">How do functions help programmers avoid repetition?</div>
+      <div class="concept-description"> 
+        <p>Functions can automatically perform repetitious tasks, such as an HTML format 
+        that is used over and over.</p>
+      </div> 
+    <div class="concept-title">What happens if a function doesn't have a <code>return</code>
+    statement?</div>
+      <div class="concept-description">  
+        <p>If a function doesn't have a return statement, it will return "none".</p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 4: Control Flow and Loops: If & While </h2>
+  <div class="concept">
+    <div class="concept-title">Making Comparisons</div>
+      <div class="concept-description">       
+        <p>Python is able to compute greater/less-than comparisons, which can then be
+        used in generating outputs.</p>
+        <p>The equal sign is used for variable assignment, so double equal signs is what
+        is used in comparing two values for equality.</p>
+      </div>
+    <div class="concept-title">If Statements</div>
+      <div class="concept-description">       
+        <p>An "if" statement can be used to perform a function based on the result of
+        a decision made, perhaps, through a comparison.</p>
+        <p>"if" is followed by a test expression and a colon. Inside that code (indented
+        on the next line) is the code that will be executed when the test expression is
+        true. If it's not true, the code will continue to another path for that
+        instance.</p>
+      </div>
+    <div class="concept-title">Procedural Thinking</div>
+      <div class="concept-description"> 
+        <p>Telling a computer how to do something that appears to be simple is much
+        harder than it seems and requires very clear, well-explained steps. Programming 
+        involves a lot of breaking down problems into smaller components that can be
+        taken one bit at a time.</p>
+        <p>Smaller functions that were previously coded may be added into more complex
+        functions that can be made simpler by such an inclusion.</p>
+      </div> 
+    <div class="concept-title">Loops</div>
+      <div class="concept-description">  
+        <p>A loop is a way to do something over and over again. It is executed using
+        "while" followed by a test expression and a block of code. In a "while" loop,
+        it keeps repeating/going on as long as the test expression is true. A function
+        can happen many times over.  This is in contrast to "if" statements in that "if" 
+        statements happen only 1 or 2 times.</p>
+        <p>Break Statements/Break tests follow the code. If true, it will stop executing 
+        the "while" loop and jump to the next code.</p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 5: Debugging </h2>
+  <div class="concept">
+    <div class="concept-title">Bugs Happen!</div>
+      <div class="concept-description">       
+        <p>Problems within code that prevent it from working properly are referred to
+        as "bugs".  They can't be avoided, so it is important to build a mental model and
+        techniques that help to find out how the system works and what about it isn't.</p>
+      </div>
+    <div class="concept-title">Error Messages</div>
+      <div class="concept-description">       
+        <p>Error messages are provided when code crashes. It looks confusing, but does
+        usually include useful information about what type of error there is and where. 
+        Solutions to error messages can often be found through Google.</p>
+      </div>
+    <div class="concept-title">Work Off of Example Code</div>
+      <div class="concept-description"> 
+        <p>Code is often written using example code that works properly. You can work
+        off of the example and change it to do what you want it to.</p>
+        <p>If that doesn't work, make random changes and, if still struggling, ask for
+        help.  After that, try commenting out the defunct new code and copying the 
+        example code. Run the example to make sure it works. Then, modify it in small 
+        steps to make sure it does what you want. Once you have functional code, look 
+        back and try to see where you went wrong before.</p>
+        <p>If working with example code, you must take care to make sure the example 
+        itself works properly or the new code may inherit errors.</p>
+      </div> 
+    <div class="concept-title">Check Intermediate Results</div>
+      <div class="concept-description">  
+        <p>When dysfuntional code does not crash and get an error message, it can be 
+        harder to figure out what is going wrong. One way to go about working in this
+        scenario is splitting up the code by introducing print statements that output
+        the variables so you can see them. This helps to pinpoint where the function
+        is going wrong.</p>
+      </div>
+     <div class="concept-title">Keep and Compare Old Versions</div>
+      <div class="concept-description">  
+        <p>When code isn't working, it's tempting to throw it away. However, the first
+        attempt may turn out to be better than the second and you may wish to go back
+        to it. To save previous code, comment it out by adding a hashtag or turn it into 
+        a big string by adding triple quotes at either end of it. You may also copy code 
+        into a different file.</p>
+        <p>Software engineers use version control as well, such as Github, which allows
+        them to access all versions worked with up to the current version.</p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 6: Structured Data: Lists and For Loops </h2>
+  <div class="concept">
+    <div class="concept-title">Lists</div>
+      <div class="concept-description">       
+        <p>A list is a more structured object that is another way to store
+        data. Whereas in a string all the elements must be characters, a list is a
+        sequence of anything.</p>
+        <p>For example: p=['y','a','b','b','a']</p>
+        <p>Nested lists are lists within lists - numbers or characters.</p>
+        <p>For example: mixed_up=['apple',3,'oranges',27,[1,2['alpha','beta']]]</p>
+      </div>
+    <div class="concept-title">Mutation</div>
+      <div class="concept-description"> 
+        <p>Another difference between strings and lists is that lists support mutation 
+        or are "mutable" and strings to not.  This means that we can change the value
+        of a list after we've created it. With a string, we can only change what a 
+        value refers to, but we cannot change previous versions of that string.</p>
+      </div> 
+    <div class="concept-title">List Operations</div>
+      <div class="concept-description">  
+        <p>The method, append, will add an element to the end of a list (it mutates
+        the old list.)</p>
+        <p>It is written as follows:  stooges=['Moe','Curly','Larry']
+        --> stooges.append('Shemp')
+        --> stooges=['Moe','Curly','Larry','Shemp']
+        --> This has not created a new list. It has added to the old one </p>
+        <p>The method, len, will pass us the length of a list.</p>
+      </div>
+    <div class="concept-title">Loops on Lists</div>
+      <div class="concept-description">  
+        <p>Functions can be written where a list is passed in. While a particular
+        test is true, a block of code can be executed.</p>
+        <p>For loops can also be used for a particular element in a list or parameter.</p>
+      </div>
+    <div class="concept-title">Find Element</div>
+      <div class="concept-description">  
+        <p>A list and a target can be passed in as parameters using the find function, 
+        which will then provide the location of the target in the list.</p>
+      </div>
+    <div class="concept-title">Index</div>
+      <div class="concept-description">  
+        <p>The index function locates the position of a value in a list.  It will return
+        the position of that value or an error if the value cannot be found.</p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 7: How to Solve Problems </h2>
+  <div class="concept">
+    <div class="concept-title"></div>
+      <div class="concept-description">       
+        <p>Learning how to solve problems is a life-long skill that will always leave
+        room to grow.</p>
+      </div>
+    <div class="concept-title">The First Step</div>
+      <div class="concept-description">       
+        <p>The first step to solving a problem is making sure you understand the 
+        problem. You need to consider the set of inputs that will be required, as well 
+        as the desired outputs.  The solution to a problem will be a procedure that 
+        can take an input and produce the desired output that satisfies the relationship 
+        that you want.</p>
+      </div>
+    <div class="concept-title">Work Out Some Examples</div>
+      <div class="concept-description"> 
+        <p>The next step, before you start coding, would be to work out some examples 
+        to make sure you understand the relationship between the inputs and outputs.</p>
+      </div> 
+    <div class="concept-title">Solve the Problem as a Human</div>
+      <div class="concept-description">  
+        <p>Once you've made sure you understand the relationship between the inputs and 
+        outputs, you should start trying to solve the problem in the systematic way that 
+        you would as a person.  Before you can begin to write code, you need to be able 
+        to solve it!</p>
+      </div>
+    <div class="concept-title">Simplify</div>
+      <div class="concept-description">  
+        <p>After you've solved the problem systematically and written an algorithm, don't 
+        just implement it. Try to find a simpler way to write it!</p>
+      </div>
+    <div class="concept-title">Develop Incrementally and Test as You Go</div>
+      <div class="concept-description">  
+        <p>Once you have a mechanical solution and a simpler way to write it, then 
+        you can start writing code, thinking carefully about where to start. Write bits 
+        of pseudocode that build on one another in steps towards the ultimate goal.</p>
+      </div>
+  </div>
+</div>
+
+<hr/>
+
+<h1>Stage 3 Important Concepts</h1>
+
+<div class = "lesson"> 
+  <h2>Lesson 1: Intro to Abstraction</h2>
+  <div class="concept">
+    <div class="concept-title">What is Abstract Thinking?</div>
+      <div class="concept-description">       
+      	<p><b>Abstraction</b> is about hiding certain levels of complexity that don't 
+      	need to be shown to get something done. For example, to search for a recipe in 
+      	Google, you just type something in and click a button. The processes going on 
+      	behind the scenes are not important at that point. This will become clearer as 
+      	it relates to programming in the sections of notes below, but dealing with the 
+      	minimum task at each step in programming depends heavily on "abstracting away" 
+      	other functions and information.</p>
+      </div>
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 2: Use Functions</h2>
+  <div class="concept">
+    <div class="concept-title">Beginning to Solve a Problem</div>
+      <div class="concept-description">       
+        <p>Start solving a problem by figuring out its components and their relationships. 
+        This can be done by writing out in English the steps you would take work it out.</p>
+        <p>Google how to do the steps that might have a written function already in 
+        existence. These functions will need to be imported within the code.</p>
+      </div>
+    <div class="concept-title">Python Standard Library</div>
+      <div class="concept-description"> 
+        <p>Some <b>methods</b>, or functions, like 'open', 'time' and 'webbrowser' are so 
+        commonly used in Python that they are readily available within the <b>Python 
+        Standard Library</b> and don't need to be imported. These are called built-in 
+        functions and can be readily accessed, like a book in a home library.</p>       
+        <p>There are also thousands of external Python packages that can be downloaded 
+        and used for various needs that do not come with standard library.</p>
+      </div> 
+  </div>
+</div>
+
+<div class = "lesson"> 
+  <h2>Lesson 3: Use Classes</h2>
+  <div class="concept">
+    <div class="concept-title">What is a Class?</div>
+      <div class="concept-description">       
+        <p>An <b>object class</b> is like a blueprint of a building. The same blueprint can be used 
+        to build multiple buildings with different characteristics, such as the color or 
+        how many stories it has. That class can be used to create multiple instances of 
+        that blueprint by building off of its existing properties as a new object.</p>
+        <p>For instance, within the class "Dog", there could be many instances, 
+        such as "boxer", "bulldog", etcetera. Each of those instances would have the same 
+        properties that all dogs do, but they would also have some that make them unique.</p>
+      </div>
+    <div class="concept-title">Using Abstracted Code from Modules</div>
+      <div class="concept-description"> 
+        <p>"from" and "import" statements allow you to import specific attributes from a 
+        <b>module</b>. When you download a package file or module, you get code that is 
+        essentially hidden, or abstracted away, but will perform its job nonetheless. 
+        <p>There are classes within those modules that, when called as a function with 
+        parentheses, in turn call the __init__ function defined inside of that class. 
+        This creates space and memory for a new instance, also called an <b>object</b>. 
+        It will have its own unique attributes, or properties.</p>
+      </div> 
+    <div class="concept-title">Make Classes</div>
+      <div class="concept-description">  
+        <p>Google style guide provides guidelines for styling conventions when naming 
+        new classes. It is good practice to create a new class inside one file and then 
+        put it to use in another.</p>
+        <p>First, create a class outside of the Python Standard Library. Then subclasses 
+        can be created within it. This calls the function __init__, also known as a 
+        <b>constructor</b>, because it constructs space or memory for a new instance.</p>
+        <p>The __init__ function is a preexisting class variable. It takes a 
+        few parameters, the first of which is self.  Self is the name of the instance 
+        itself. The other variables are the information about it and are called <b>instance 
+        variables</b>.  Every object has its own version of those variables.</p>
+        <p><b>Class variables</b>, in contrast, are variables that we want all the objects in 
+        that class to share. For instance, for a class Movie, valid_ratings would be a 
+        variable that applied to all instances because all movies are rated on the same 
+        scale.</p>
+        <p><b>Inheritance</b>, as in genetics, is the passing down of attributes from one class 
+        to another, newer class.  To use those attributes, the parent class's __init__ 
+        function must be called within the child class's __init__ function.  It must 
+        also be referenced in the class parenthesis --> class Child(Parent)</p>
+        <p>An inherited method can be overridden with a method of the same name within 
+        a subclass. This is called <b>method overriding</b>.</p>
+        <p>Abstraction is applied in creating new classes and objects by the inheritance 
+        and inclusion of code that is written elsewhere.  Similar to HTML and CSS, where 
+        the CSS styling is done externally and imported into the HTML document for 
+        simplicity's sake, so it goes with programming. This is <b>abstraction</b> 
+        of unnecessary information.</p>
+        <p><b>Methods</b> are functions that take an instance as the first 
+        parameter and defines some characteristics of a class/object. They are attributes 
+        of classes or objects, which differs from a function in that a function does NOT 
+        belong to a class. The object (self) is passed in as follows: 
+        <code>self.name = name </code>. A method for class dog, for example, could be 
+        a dog eats or walks.</p>
+      </div>
+    <div class="concept-title">Object-oriented Programming (OOP)</div>
+      <div class="concept-description">  
+        <p>Now, after explaining classes and objects, object-oriented programming is a 
+        programming model in which objects are created to interact in a web of data, each 
+        containing its own data.</p>
+        <p>With a main idea class defined, like fruit, you can then break the smaller 
+        parts into types of fruit which have their own unique properties in addition to
+        those that all fruits share.</p>
+        <p>Functions that don't need to be seen are abstracted away. If I make a cake, I 
+        don't need to know how the ingredients came to be in order to cook with them. 
+        Similarly, OOP utilizes objects and their functions without always having to 
+        tie in extraneous information.</p>
+      </div>
+    <div class="concept-title">What is the Importance of OOP?</div>
+      <div class="concept-description">  
+        <p>OOP makes programming for large projects much simpler and more streamlined 
+        because the path to the end product can be mapped out like a family 
+        tree, with variables being passed down rather than being created over and over 
+        again.</p>
+        <p>A defined class can be used many times over in the program it was created for, 
+        but also by other OO programs. This lends itself to easier distribution within 
+        networks.</p>
+        <p>Any data type can be created with this class/object creation method, which 
+        means the possibilities are endless!</p>
+      </div>
+  </div>
+</div>
+
+<hr/>
+
+<h1>Stage 4 Important Concepts</h1>
+
+<div class = "lesson"> 
+  <h2>Lesson 1 - Making A Web Application </h2>
+  <div class="concept">
+    <div class="concept-title">Networking, the Internet, and Servers</div>
+      <div class="concept-description">       
+        <p>A network is a group of entities (communities, governments, computers) that 
+        can communicate even though they are not directly connected.  For example, 
+        a<->b<->c  would be a network because "a" cannot communicate directly 
+        with "c", but can do so through "b". There must be at least 3 nodes in a 
+        network.  To make a network, we need a way to encode messages, a way to 
+        interpret them, a way to route them, and rules for who gets to use the 
+        resources.</p>
+        <p>There are two main ways to measure a network:  latency and 
+        bandwidth. <b>Latency</b> is the time it takes for a message to get from source to 
+        destination. We measure this by timing when you start sending to the time that 
+        the receiver starts receiving. It is a unit of time often measured 
+        in milliseconds. <b>Bandwidth</b> is the amount of information that can be transmitted 
+        per unit time. It is measured in bits per second, or Mbps(million bits per sec). </p>
+        <p>What is a bit?  One <b>bit</b> is the smallest unit of information; it can 
+        transmit one yes or no, or a zero or one - only two choices. The more bits you 
+        have, the more information you can encode. For example, 4 bits can encode 16 
+        different numbers. Every time I add one more bit, I double the information 
+        because I have one more yes/no question.</p>
+        <p>Networks need protocols. <b>Protocol</b> is a set of rules for how 
+        two entities can talk to each other. On the web, we use <b>hypertext transfer 
+        protocol </b> (http). This is how a client (the web browser) can 
+        talk to the server to obtain a document. The client can send 
+        a GET message to receive something and then the server sends a response.</p>        
+      </div>
+    <div class="concept-title">What is going on in that URL?</div>
+      <div class="concept-description"> 
+        <p>URL stands for <b>uniform resource locator</b>. For example, in 
+        http://www.udacity.com/ -->  "http" is the <b>protocol</b>, "udacity" is the 
+        <b>host</b>, and the forward slash plus anything after it is the <b>path</b>.</p>
+        <p>A <b>query parameter(or GET parameter)</b>  will be within the path, starting 
+        with a question mark; the structure of it will be name=value.  A second parameter 
+        and any following parameters, will be separated by ampersands.</p>
+        <p>For example:  http://udacity.com/foo?p=foo -> The value of p is foo.</p>
+        <p>A <b>fragment</b> is something following a pound sign in the path of a URL. It 
+        is not sent to the server when you make a request, but it is used to reference a 
+        particular part of a page that you're looking at. When there are query parameters  
+        in the URL, the fragment follows last.</p>
+        <p>The final piece to a URL is the <b>port</b>. In order to make an internet 
+        connection, you need the address and the port. <em>By default, the port equals 80.</em> 
+        If you want a different one, you can include it in the URL between the host and 
+        the path. For example, http://localhost:8000/</p>
+        <p>HTTP, again, is what the browser uses to talk to the web server. Requests from 
+        your browser (http://www.example.com/foo) begin with a <b>request line</b>. The 
+        request line has 3 main parts: the method, path, and version.</p>
+        <p>     Example -> GET /foo HTTP/1.1 </p>
+        <p>GET is the method, /foo is the path, and HTTP/1.1 is the version. The 
+        <b>method</b> is the type of request being made (ie. get, post). The <b>path</b> 
+        is the actual document we're requesting from the server. The <b>version</b> is 
+        most frequently 1.1. The host isn't in the request line. It is only used for 
+        making the connection. The path is used for making the request.</p>
+        <p><b>Headers</b> for HTTP Requests include Host and User-agent. For example, 
+        (Host: www.example.com) and (User - Agent: chrome).  <b>User-agent</b> is usually 
+        the type of browser.  User agents are a very important part of headers. It is 
+        important to include it honestly when writing software that interacts with others' 
+        websites.  The format in writing a user agent is no space between words in the 
+        name + a space + a colon + a space + the value. </p>
+        <p>Example:  Host: www.hipmunk.com   or   User-Agent: ignore me.</p>
+        <p><b>HTTP Responses</b> are what the server sends back to the requesting browser. 
+        The response looks very similar to the request. It has a <b>status line</b>, which 
+        is analogous to the request line.</p>
+        <p>     For example: ( - HTTP/1.1 200 OK) --> "200" is the <b>status code</b>, 
+        "OK" is the reason phrase, and the version is the same. The <b>reason 
+        phrase</b> is the English language description of the status code: "200 OK" means  
+        the document is found, "302 found" means the document is located somewhere else, 
+        "404 Not Found" means that the document wasn't found, and "500 Server Error" means 
+        the server broke trying to handle the request.  Common headers for HTML responses 
+        include Date, Server (ie. Server: Apache/2.2.3), Content-Type, and 
+        Content-Length.</p>
+        <p><b>SERVERS</b>: the purpose of a server is to respond to HTTP requests. 
+        The two main types of responses are <b>static and dynamic</b>. Content is 
+        considered static if it is a pre-written document that the server just returns. 
+        An image would be an example. Dynamic requests are where the response is built 
+        on the fly. This content generation is done by web applications. A web application 
+        lives on a web server, it speaks HTTP, and it generates content that the browser 
+        requests.</p>
+      </div> 
+    <div class="concept-title">Forms</div>
+      <div class="concept-description">  
+        <p>Forms allow websites to get information from users.</p>
+        <p>HTML Forms begin with a form opening and closing tag. One type of element that 
+        can be added as content within an HTML form is 'input'. For example, 
+        <code><input name="name"></code>. We can also add input type as "submit", 
+        which will add a submit button and is essentially the same as pressing Enter. 
+        By default, this form will submit to itself unless we get it to submit to 
+        somewhere else.</p>
+        <p>There is an attribute, called "action", that we can add to the opening form 
+        tag and will allow us to send the form element input to a desired location.  For 
+        example, if you add (http://www.google.com/search), it will provide Google search 
+        results because the action added our input to the "q" parameter in the url, which 
+        is there because we named the input "q".  URL encoding turns spaces between words 
+        into pluses and will encode punctuation as well. For example, an exclamation is 
+        "%21".</p>
+        <p>It is generally a good idea to include <b>input types</b>, which can be 
+        text or password, for example. <code><input type="text" name="q"></code>. 
+        If you change the type to password, the letters will appear as dots in the text 
+        box. The password form element should be used to collect passwords on your site, 
+        but it is not sent securely to the server and will show up in the URL parameter. 
+        Another input type is "checkbox".  If checked, the name parameter will show up as 
+        "on". If unchecked, the parameter will simply not show up. </p>
+        <p>The <b>"radio"</b> form type will add radio buttons instead of boxes and, 
+        by default, will behave like checkboxes that can't be unchecked.  If we want the 
+        group behavior we expect from the radio element, we can give them all the same 
+        name - this makes it to where you can only select one of the buttons. The name 
+        parameter in the URL will still simply just say "on" however, no matter which 
+        button is selected. The way to fix this is by changing the value of each button.
+        For example, <code><input type="radio" name="q" value="one"></code>. Since the 
+        user will want to know what each of the radio buttons stand for, the "label" 
+        element will need to be used. The inputs will be surrounded by the opening and 
+        closing label tags and the text that the user will see associated with each 
+        button included just after the label tag and before the input.</p>
+        <p><b>Dropdown forms</b> begin with an opening and closing select element with a 
+        name. Within that select element will be various option tags that contain the 
+        text that is to be available in the menu. Values can be added to the options in 
+        each opening option tag that will be what shows up in the URL as the name's value.</p>
+      </div>
+    <div class="concept-title">Modules and Dictionaries</div>
+      <div class="concept-description">  
+        <p><b>The Modulus Operator</b> is included in all programming languages and is 
+        used to get our outputs in the correct range. It takes a number and maps it to 
+        the range based on the remainder when you divide that number. It works like a 
+        clock.</p>
+        <p><b>Dictionaries</b> are data structures similar to a list in Python. It is a 
+        set of (key,value) pairs.</p>
+        <p>Example: <code>elements = {'hydrogen':1, 'helium':2, 'carbon':6 }</code></p>
+        <p>Note that curly brackets are used. Each element in the dictionary is 
+        a <b>key value pair</b>. Dictionaries are mutable, so, unlike in strings, the 
+        values within can be updated.</p>
+      </div>
+    <div class="concept-title">App Engine</div>
+      <div class="concept-description">  
+        <p>Google App Engine can be downloaded and used as a platform for running web 
+        applications using Google's infrastructure.</p>
+        <p>When you create a new app in GAE, it creates the .yaml and .py files that 
+        you need, which you will use to define and import libraries, set up your 
+        environment and handlers, and write your code that will accompany your .html file.</p>
+      </div>
+    <div class="concept-title">Validation</div>
+      <div class="concept-description">  
+        <p>Implementing validation techniques can help prevent your app from being hacked.  
+        It is an important security measure to properly validate any user input to 
+        your web application. This includes ensuring the input is typed correctly, 
+        within specifications, and only contains certain characters, for example.</p>
+        <p>You can take advantage of variable substitution, as well, by using 
+        <code>%s</code>. For example, 
+        	<code> "Hello, %s!" % Steve  --> Prints out "Hello, Steve!"</code></p>
+        <p>HTML escaping is also a valuable tool in making sure the input coming in to 
+        your application isn't anything that might mess it up. This prevents characters, 
+        like a question mark or an ampersand, from being misinterpreted in the URL by 
+        printing them out in encoded versions.</p>
+      </div>
+    <div class="concept-title">HTML Templates</div>
+      <div class="concept-description">  
+        <p>Templates can be used to automate your HTML as well as avoid having to change 
+        each page one by one if you make any design changes in a web application.
+        Templates allow you to separate your html from python code. Your code becomes 
+        more readable, you have more secure websites, and html is easier to modify.</p>
+        <p>A template library is a library to build complicated strings. Google App Engine 
+        has some libraries, such as Jinja2, that can be used for building templates.</p>
+        <p>Variable substitution can be done by defining a variable in the Python file 
+        and including its name in double curly brackets within the html file. This will 
+        insert the variable in that place. </p>
+        <p>Template tags are distinguished by being surrounded by curly brackets and  
+        percent signs. For example, <code>{% for stage in stages %}</code> tells the 
+        template that it needs to do something there with stages. If statements can also 
+        be used with template tags and can act one way or another based on whether the 
+        statement evaluates to true or false.</p>
+        <p>Some tips:  First, automatically escape variables when you can. There is almost 
+        always a built-in function that will escape any html coding that might be used 
+        to harm or change your site when a user is inputting information. Second, 
+        minimize the code in templates. The whole purpose of templates is to not have html 
+        in our code. Likewise, and thirdly, minimize html in code. All html should go in a 
+        template, as a rule.</p>
+        <p><b>Template inheritance</b> - When you generate html, you don't want to have 
+        to repeat when you reuse the same header and footer, for example. So, you can 
+        make one template to reuse that universal code and then subtemplates for the 
+        content in the middle.</p>       
+      </div>
+    <div class="concept-title">Databases</div>
+      <div class="concept-description">  
+        <p>Databases are how we store all the information being collected by users and 
+        are the final piece in creating functional web applications.</p>
+        <p>Google App Engine's data store can abstract away a lot of the difficulty in 
+        creating a database, which makes the creation of a functional web application a 
+        lot simpler.</p>
+        <p>A <b>database</b> is a program that stores and retrieves large amounts of 
+        structured data (see "Tables" below). This can be just that program, the machine 
+        running that program, or a group of machines working together to store/retrieve 
+        data.</p>
+        <p><b>Tables</b> are used pretty universally in databases. For example, a link 
+        submitted to Reddit is broken up into <b>columns</b>, such as ID, votes, user who 
+        submitted the link, the date it was submitted, the display title, and the URL.  
+        Each new entry would be a new <b>row</b> in the table.  One row will be one 
+        instance of an element in the table.  The user column may come from another table 
+        of users, which may have ID, name, date, and password columns.</p>
+        <p>Querying a database using Python code is a difficult task. It is error-prone, 
+        tedious, and slow.</p>
+        <p>There are many types of databases. Relational databases often use SQL to 
+        manipulate them. Examples of this type include MySQL, PostgreSQL, SQLite, and 
+        Oracle.  Google App Engine's Data Store and Amazon Dynamo are other types of 
+        databases.  There are also NoSQL databases, which include Mongo and Couch as 
+        popular options.</p>
+        <p><b>SQL, or sequel, or structured query language, is a language for expressing 
+        queries and asking question of the database.</b></p>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
