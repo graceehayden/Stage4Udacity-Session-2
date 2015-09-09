@@ -24,7 +24,7 @@ class MainPage(Handler):
 		  concept = self.request.get('concept','description')
 		  lesson = self.request.get('lesson')
 		  stage = self.request.get('stage')
-		  template_values = self.request.get_all('concept', 'lesson', 'stage')
+		  template_values = {'concept': concept, 'lesson': lesson, 'stage': stage}
       self.write.template.render(template_values)
       self.render("index.html", concept=concept, lesson=lesson, stage=stage, template_values=template_values)
     
