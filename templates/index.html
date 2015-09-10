@@ -3,23 +3,22 @@
 {% block content %}
 
 
-<h1> {{stage}} Important Concepts </h1>
-{% for lesson in lessons %}
-	<div class = "lesson"> 
-  		<h2> {{ lesson }} </h2>
-{% endfor %}
-  
-{% for concept in concepts %}
-<div class="concept">
-  <div class="concept-title">
-    {{ concept[0] }}
-  </div>
-  <div class="concept-description">
-    {{ concept[1] }}
-  </div>
+<h1>Stage 1 Important Concepts</h1>
+{% for lesson in stage1 %}
+<div class=“lesson”>
+    <h2>{{ lesson[0] }}</h2>
+    {% for concept in lesson[1] %}
+    <div class="concept”>
+        <div class="concept-title">
+            {{ concept[0] }}
+        </div>
+        <div class="concept-description">
+            {{ concept[1] }}
+        </div>
+    </div>
+    {% endfor %}
 </div>
 {% endfor %}
-
 
 <h1>Stage 1 Important Concepts</h1>
 
