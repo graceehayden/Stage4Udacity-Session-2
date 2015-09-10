@@ -20,12 +20,27 @@ class Handler(webapp2.RequestHandler):
         self.write(self.render_str(template, **kw))
 
 class MainPage(Handler):
-    def get(self):
-		  concept = self.request.get('concept','description')
-		  lesson = self.request.get('lesson')
-		  stage = self.request.get('stage')
-		  template_values = {'concept': concept, 'lesson': lesson, 'stage': stage}
-      self.write.template.render(template_values)
-      self.render("index.html", concept=concept, lesson=lesson, stage=stage, template_values=template_values)
+	def get(self):
+		stage1 = [
+			['Lesson 1 Important Concepts',[
+				['HTML', 'HTML is the text we read online, or, more fancily, hypertext markup language.'],
+				['Tags and Elements', 'This is an example of a paragraph tag. Tags are used to distinguish elements, or parts contained within the tags. The 'em' tag, for instance, places emphasis on text by <em>italicizing</em> it. The 'p' tag I've used separates the text within it into... PARAGRAPHS.'],
+				['Why Computers Are Stupid', 'Computers need to be told what to do. They will misread all unedited typos and ruin code, lest you <b>change your ways</b>, Ebenezer. I promise to slow down and appreciate the meaning in <del>Christmas</del> coding.'],
+				['Inline and Block Elements', 'Block elements put themselves in blocks. Inline's don't. Block elements are good for styling and inline elements are not.']
+				]
+			]
+			['Lesson 2: Creating a Structured Document with HTML',[
+				['Developer Tools','Everything designed on a website is in blocks. Within the blocks are trees of elements that may be designed separately based on their tags. CSS is commonly used for that design.'],
+				['HTML is Structured Like a Family Tree','HTML elements are tiered within one another, which allows for visual ease in styling. Each new element within another is indented and the indentations get deeper the more elements that get nested within others.'],
+				['Text Editors','HTML is written with text editors, which are like word processors for code. Some automatically close tags and auto-indent.'],
+				]
+			]
+			['Lesson 3: Adding Style to HTML Using CSS',[
+				['Avoiding Repetition','If programmers repeat the same code over and over in different places, any future changes will be harder to make, as they will have to go back and find each place it was used.'],
+				['CSS','CSS, or cascading style sheets, is styling done in a separate document that is linked to on the index page. It allows for non-redundancies by the assignment of classes, etcetera.'],
+				]
+			]	
+		]	
+		self.render("index.html", stage1=stage1)
     
 app = webapp2.WSGIApplication([('/', MainPage)], debug=True)
