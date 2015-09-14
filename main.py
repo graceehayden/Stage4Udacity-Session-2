@@ -21,7 +21,9 @@ class Handler(webapp2.RequestHandler):
 
 class MainPage(Handler):
 	def get(self):
-		stage1 = [
+		stage = [name, lessons]
+		name = 'Stage 1'
+		lessons = [
 			['Lesson 1 Important Concepts',[
 				['HTML', 'HTML is the text we read online, or, more fancily, hypertext markup language.'],
 				['Tags and Elements', 'This is an example of a paragraph tag. Tags are used to distinguish elements, or parts contained within the tags. The 'em' tag, for instance, places emphasis on text by <em>italicizing</em> it. The 'p' tag I've used separates the text within it into... PARAGRAPHS.'],
@@ -41,6 +43,6 @@ class MainPage(Handler):
 				]
 			]	
 		]	
-		self.render("index.html", stage1=stage1)
+		self.render("index.html", stages=stages, name=name, lessons=lessons)
     
 app = webapp2.WSGIApplication([('/', MainPage)], debug=True)
