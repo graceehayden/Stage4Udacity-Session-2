@@ -1,15 +1,15 @@
-
-
 {% extends 'base.html' %}
+
 {% block content %}
+
 <h1> {{name}} Important Concepts</h1>
 {% for lessons in stage %}
 <div class=“lesson”>
 	<h2>{{ lessons[0] }}</h2>
 	<div class="concept”>
 		<div class="concept-title">
-		{{ lessons[0][0] }}
-	</div>
+		{{ lessons[0][0] }}           *** IS THIS REFERENCED CORRECTLY? 
+	</div>								*** DO I NEED TO USE A DICTIONARY INSTEAD?
 	<div class="concept-description">
 		{{ lessons[0][1] }}
 	</div>
@@ -30,8 +30,8 @@
 		<div class="concept-description">
 			<p>This is an example of a paragraph tag. Tags are used
 				to distinguish elements, or parts contained within the tags. 
-				The em tag, for instance, places emphasis on text by 
-				<em>italicizing</em> it. The p tag I used separates the text 
+				The 'em' tag, for instance, places emphasis on text by 
+				<em>italicizing</em> it. The 'p' tag I've used separates the text 
 				within it into... PARAGRAPHS.
 			</p>
 		</div>
@@ -45,7 +45,8 @@
 		</div>
 		<div class="concept-title">Inline and Block Elements</div>
 		<div class="concept-description">
-			<p>Block elements put themselves in blocks. Block elements are good for styling and inline elements are not.
+			<p>Block elements put themselves in blocks. Inline's don't. 
+				Block elements are good for styling and inline elements are not.
 			</p>
 		</div>
 	</div>
@@ -86,7 +87,7 @@
 				future changes will be harder to make, as they will have to go back and find each
 				place it was used.
 			</p>
-			<p>div and class labels allow for a universal application in multiple places
+			<p>"div" and "class" labels allow for a universal application in multiple places
 				with a particular label in a document. The styling for every element with that
 				label can be done in one place. 
 			</p>
@@ -123,7 +124,7 @@
 		</div>
 		<div class="concept-title">Python Expressions and Grammar</div>
 		<div class="concept-description">
-			<p>Python works through written sentences used to communicate with the 
+			<p>Python works through written "sentences" used to communicate with the 
 				computer. They are referred to as expressions.
 			</p>
 			<p>Computers cannot interpret code if even one small error is present, so
@@ -149,9 +150,9 @@
 			<p>Value can be assigned by writing the name of the variable = value. That
 				value can be changed. 
 			</p>
-			<p>Example: What's the difference between what the equals sign means 
+			<p>Example: What's the difference  between what the equals sign = means 
 				in <code>2+3=5</code> and <code>my_variable=5</code>?  The former is a computation
-				meaning (is the same as), while the latter is a variable assignment and the
+				meaning "is the same as", while the latter is a variable assignment and the
 				equals sign means "takes the value of". My_variable is given the value of 5.
 			</p>
 		</div>
@@ -275,9 +276,7 @@
 				off of the example and change it to do what you want it to. If that doesn't work, 
 				make random changes.  After that, try commenting out the defunct new code and 
 				copying the example code. Run the example to make sure it works. Then, modify it 
-				in small steps to make sure it does what you want. Once you have functional code, 
-				look back and try to see where you went wrong before. When working with example 
-				code, you must take care to make sure the example itself works properly or the 
+				in small steps. You must take care to make sure the example itself works properly or the 
 				new code may inherit errors.
 			</p>
 		</div>
@@ -314,14 +313,12 @@
 				data. Whereas in a string all the elements must be characters, a list is a
 				sequence of anything.
 			</p>
-			<p>For example: p=['y','a','b','b','a']</p>
 			<p>Nested lists are lists within lists - numbers or characters.</p>
-			<p>For example: mixed_up=['apple',3,'oranges',27,[1,2['alpha','beta']]]</p>
 		</div>
 		<div class="concept-title">Mutation</div>
 		<div class="concept-description">
 			<p>Another difference between strings and lists is that lists support mutation 
-				or are "mutable" and strings to not.  This means that we can change the value
+				or are mutable and strings to not.  This means that we can change the value
 				of a list after we've created it. With a string, we can only change what a 
 				value refers to, but we cannot change previous versions of that string.
 			</p>
@@ -331,9 +328,9 @@
 			<p>The method, append, will add an element to the end of a list (it mutates
 				the old list.)
 			</p>
-			<p>It is written as follows:  stooges=['Moe','Curly','Larry']
+			<p>It is written as follows:  <code>stooges=['Moe','Curly','Larry']
 				--> stooges.append('Shemp')
-				--> stooges=['Moe','Curly','Larry','Shemp']
+				--> stooges=['Moe','Curly','Larry','Shemp']</code>
 				--> This has not created a new list. It has added to the old one 
 			</p>
 			<p>The method, len, will pass us the length of a list.</p>
@@ -359,7 +356,9 @@
 		</div>
 	</div>
 </div>
+
 <hr />
+
 <div class = "lesson">
 	<h2>Lesson 7: How to Solve Problems </h2>
 	<div class="concept">
@@ -831,5 +830,30 @@
 		</div>
 	</div>
 </div>
+
+<h1>What I learned in Stage 5</h1>
+<div class = "lesson">
+	<h2>JavaScript</h2>
+	<div class="concept">
+		<div class="concept-title"><a href="http://html.net/tutorials/javascript/lesson1.php">
+		What is JavaScript?</a></div>
+		<div class="concept-description">
+			<p>JavaScript is a programming language that allows the building of dynamic 
+			and interactive websites. This can mean buttons to press, forms that accept 
+			data entered by a user, animation, and more. JavaScript, like all 
+			programming languages, has its own syntax or grammar and ways of defining 
+			or calling functions. To add JavaScript to your page, you can put it 
+			directly into your HTML file or in its own, separate file. 
+			</p>
+	<div class="concept">
+		<div class="concept-title"><a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics">
+		Title </a></div>
+		<div class="concept-description">
+			<p>
+			</p>
+		</div>
+	</div>
+</div>	
+			
 {% endblock %}
 
